@@ -45,7 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CD_Conexion.cs" />
-    <Compile Include="CD_Empleados.cs" />
+    <Compile Include="CD_Commands.cs" />
     <Compile Include="Login\PrincipalLogin.cs">
       <SubType>Form</SubType>
     </Compile>

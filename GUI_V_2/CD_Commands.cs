@@ -9,20 +9,20 @@ using CapaDatos;
 
 namespace GUI_V_2
 {
-    public class CD_Empleados
+    public class CD_Commands
     {
         SqlDataReader leer;
         DataTable tabla = new DataTable();
         SqlCommand comando = new SqlCommand();
         CD_Conexion conexion = new CD_Conexion();
 
-        public DataTable Mostrar()
+        public DataTable getData(string command)
         {
 
             try
             {
                 comando.Connection = conexion.AbrirConexion();
-                comando.CommandText = "SELECT * FROM[ReclutamientoRH].[dbo].[Persona]";
+                comando.CommandText = command;
                 comando.CommandType = CommandType.Text;
                 leer = comando.ExecuteReader();
                 tabla.Load(leer);

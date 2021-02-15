@@ -23,6 +23,8 @@ namespace GUI_V_2
             MenuVertical.Width = MenuVertical.Width == 250 ? 70 : 250;
         }
 
+        public int GetMenuVertical() => MenuVertical.Width;
+
         private void iconcerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -154,6 +156,11 @@ namespace GUI_V_2
 
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BarraTitulo_Paint(object sender, PaintEventArgs e)
         {
 
         }

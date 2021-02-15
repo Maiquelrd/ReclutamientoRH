@@ -30,28 +30,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrincipalAdm));
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.Candidatos = new System.Windows.Forms.Button();
+            this.Vacantes = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblcorreo = new System.Windows.Forms.Label();
             this.lbluser = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblusuario = new System.Windows.Forms.Label();
             this.BarraTitulo = new System.Windows.Forms.Panel();
-            this.panelContenedor = new System.Windows.Forms.Panel();
             this.iconminimizar = new System.Windows.Forms.PictureBox();
             this.iconrestaurar = new System.Windows.Forms.PictureBox();
             this.iconmaximizar = new System.Windows.Forms.PictureBox();
             this.iconcerrar = new System.Windows.Forms.PictureBox();
             this.btnMenu = new System.Windows.Forms.PictureBox();
-            this.Candidatos = new System.Windows.Forms.Button();
-            this.Vacantes = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panelContenedor = new System.Windows.Forms.Panel();
             this.MenuVertical.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconminimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconrestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconmaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconcerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuVertical
@@ -69,6 +69,57 @@
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Size = new System.Drawing.Size(250, 650);
             this.MenuVertical.TabIndex = 0;
+            // 
+            // Candidatos
+            // 
+            this.Candidatos.FlatAppearance.BorderSize = 0;
+            this.Candidatos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.Candidatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Candidatos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Candidatos.ForeColor = System.Drawing.Color.White;
+            this.Candidatos.Image = global::GUI_V_2.Properties.Resources.clientes;
+            this.Candidatos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Candidatos.Location = new System.Drawing.Point(0, 376);
+            this.Candidatos.Name = "Candidatos";
+            this.Candidatos.Size = new System.Drawing.Size(250, 40);
+            this.Candidatos.TabIndex = 19;
+            this.Candidatos.Text = "Candidatos";
+            this.Candidatos.UseVisualStyleBackColor = true;
+            this.Candidatos.Click += new System.EventHandler(this.Candidatos_Click);
+            // 
+            // Vacantes
+            // 
+            this.Vacantes.FlatAppearance.BorderSize = 0;
+            this.Vacantes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.Vacantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Vacantes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Vacantes.ForeColor = System.Drawing.Color.White;
+            this.Vacantes.Image = global::GUI_V_2.Properties.Resources.reportes;
+            this.Vacantes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Vacantes.Location = new System.Drawing.Point(0, 262);
+            this.Vacantes.Name = "Vacantes";
+            this.Vacantes.Size = new System.Drawing.Size(250, 40);
+            this.Vacantes.TabIndex = 18;
+            this.Vacantes.Text = "Vacantes";
+            this.Vacantes.UseVisualStyleBackColor = true;
+            this.Vacantes.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::GUI_V_2.Properties.Resources.empleados;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 153);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(250, 40);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Empleados";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblcorreo
             // 
@@ -94,6 +145,17 @@
             this.lbluser.TabIndex = 16;
             this.lbluser.Text = "Usuario";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1, 580);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(70, 66);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
+            // 
             // lblusuario
             // 
             this.lblusuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -108,7 +170,7 @@
             // 
             // BarraTitulo
             // 
-            this.BarraTitulo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BarraTitulo.BackColor = System.Drawing.Color.White;
             this.BarraTitulo.Controls.Add(this.iconminimizar);
             this.BarraTitulo.Controls.Add(this.iconrestaurar);
             this.BarraTitulo.Controls.Add(this.iconmaximizar);
@@ -119,16 +181,8 @@
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(1050, 45);
             this.BarraTitulo.TabIndex = 1;
+            this.BarraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraTitulo_Paint);
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
-            // 
-            // panelContenedor
-            // 
-            this.panelContenedor.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(250, 45);
-            this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1050, 605);
-            this.panelContenedor.TabIndex = 2;
             // 
             // iconminimizar
             // 
@@ -195,67 +249,14 @@
             this.btnMenu.TabStop = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // Candidatos
+            // panelContenedor
             // 
-            this.Candidatos.FlatAppearance.BorderSize = 0;
-            this.Candidatos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.Candidatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Candidatos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Candidatos.ForeColor = System.Drawing.Color.White;
-            this.Candidatos.Image = global::GUI_V_2.Properties.Resources.clientes;
-            this.Candidatos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Candidatos.Location = new System.Drawing.Point(0, 376);
-            this.Candidatos.Name = "Candidatos";
-            this.Candidatos.Size = new System.Drawing.Size(250, 40);
-            this.Candidatos.TabIndex = 19;
-            this.Candidatos.Text = "Candidatos";
-            this.Candidatos.UseVisualStyleBackColor = true;
-            this.Candidatos.Click += new System.EventHandler(this.Candidatos_Click);
-            // 
-            // Vacantes
-            // 
-            this.Vacantes.FlatAppearance.BorderSize = 0;
-            this.Vacantes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.Vacantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Vacantes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Vacantes.ForeColor = System.Drawing.Color.White;
-            this.Vacantes.Image = global::GUI_V_2.Properties.Resources.reportes;
-            this.Vacantes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Vacantes.Location = new System.Drawing.Point(0, 262);
-            this.Vacantes.Name = "Vacantes";
-            this.Vacantes.Size = new System.Drawing.Size(250, 40);
-            this.Vacantes.TabIndex = 18;
-            this.Vacantes.Text = "Vacantes";
-            this.Vacantes.UseVisualStyleBackColor = true;
-            this.Vacantes.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::GUI_V_2.Properties.Resources.empleados;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 153);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 40);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Empleados";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1, 580);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(70, 66);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 15;
-            this.pictureBox2.TabStop = false;
+            this.panelContenedor.BackColor = System.Drawing.Color.White;
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Location = new System.Drawing.Point(250, 45);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(1050, 605);
+            this.panelContenedor.TabIndex = 2;
             // 
             // PrincipalAdm
             // 
@@ -272,13 +273,13 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MenuVertical.ResumeLayout(false);
             this.MenuVertical.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.BarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconminimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconrestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconmaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconcerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
