@@ -11,14 +11,15 @@ namespace GUI_V_2
 {
     public class CD_Commands
     {
-        SqlDataReader leer;
-        DataTable tabla = new DataTable();
+       
+        
         SqlCommand comando = new SqlCommand();
         CD_Conexion conexion = new CD_Conexion();
 
         public DataTable getData(string command)
         {
-
+            SqlDataReader leer;
+            DataTable tabla = new DataTable();
             try
             {
                 comando.Connection = conexion.AbrirConexion();
@@ -35,8 +36,59 @@ namespace GUI_V_2
                 conexion.CerrarConexion();
             }
            
-
             return tabla;
+
+        }
+
+        public string getSpecificData(string command)
+        {
+            SqlDataReader leer;
+            string result = string.Empty;
+            try
+            {
+                comando.Connection = conexion.AbrirConexion();
+                comando.CommandText = command;
+                comando.CommandType = CommandType.Text;
+                using (leer = comando.ExecuteReader())
+                {
+                    while (leer.Read())
+                    {
+                        result = leer[leer.GetName(0)].ToString();
+                    }
+                   
+                }
+                
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error " + e);
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
+
+            return result;
+
+        }
+
+        public void executeCommand(string command)
+        {
+            try
+            {
+                comando.Connection = conexion.AbrirConexion();
+                comando.CommandText = command;
+                comando.CommandType = CommandType.Text;
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error " + e);
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
 
         }
 

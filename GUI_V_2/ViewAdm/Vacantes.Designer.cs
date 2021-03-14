@@ -91,9 +91,9 @@ namespace GUI_V_2
             this.BtnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCrear.ForeColor = System.Drawing.Color.Black;
-            this.BtnCrear.Location = new System.Drawing.Point(269, 3);
+            this.BtnCrear.Location = new System.Drawing.Point(270, 3);
             this.BtnCrear.Name = "BtnCrear";
-            this.BtnCrear.Size = new System.Drawing.Size(260, 46);
+            this.BtnCrear.Size = new System.Drawing.Size(261, 46);
             this.BtnCrear.TabIndex = 2;
             this.BtnCrear.Text = "Crear";
             this.BtnCrear.UseVisualStyleBackColor = false;
@@ -110,6 +110,7 @@ namespace GUI_V_2
             this.BtnModificar.TabIndex = 4;
             this.BtnModificar.Text = "Modificar";
             this.BtnModificar.UseVisualStyleBackColor = false;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // BtnBorrar
             // 
@@ -124,6 +125,7 @@ namespace GUI_V_2
             this.BtnBorrar.TabIndex = 3;
             this.BtnBorrar.Text = "Borrar";
             this.BtnBorrar.UseVisualStyleBackColor = false;
+            this.BtnBorrar.Click += new System.EventHandler(this.BtnBorrar_Click);
             // 
             // dataGridView1
             // 
@@ -137,6 +139,7 @@ namespace GUI_V_2
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(801, 191);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
             // 
             // Vacantes
             // 
@@ -148,6 +151,7 @@ namespace GUI_V_2
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Vacantes";
             this.Text = "Vacantes";
+            this.Load += new System.EventHandler(this.Vacantes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);

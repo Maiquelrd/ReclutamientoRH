@@ -13,9 +13,15 @@ namespace GUI_V_2
 {
     public partial class PrincipalAdm : Form
     {
+        private static PrincipalAdm instance { get; set; }
         public PrincipalAdm()
         {
             InitializeComponent();
+            instance = this;
+        }
+        public static PrincipalAdm getInstance()
+        {
+            return instance;
         }
         private void btnMenu_Click(object sender, EventArgs e)
         {

@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="CD_Conexion.cs" />
     <Compile Include="CD_Commands.cs" />
+    <Compile Include="Helpers\Datefix.cs" />
     <Compile Include="Login\PrincipalLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +58,12 @@
     </Compile>
     <Compile Include="ViewAdm\Candidatos.Designer.cs">
       <DependentUpon>Candidatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAdm\CrearEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAdm\CrearEmpleado.Designer.cs">
+      <DependentUpon>CrearEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewAdm\Empleados.cs">
       <SubType>Form</SubType>
@@ -83,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewAdm\Candidatos.resx">
       <DependentUpon>Candidatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAdm\CrearEmpleado.resx">
+      <DependentUpon>CrearEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewAdm\Empleados.resx">
       <DependentUpon>Empleados.cs</DependentUpon>
