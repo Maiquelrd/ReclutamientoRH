@@ -97,6 +97,7 @@ namespace GUI_V_2
             this.BtnCrear.TabIndex = 2;
             this.BtnCrear.Text = "Crear";
             this.BtnCrear.UseVisualStyleBackColor = false;
+            this.BtnCrear.Click += new System.EventHandler(this.BtnCrear_Click);
             // 
             // BtnModificar
             // 

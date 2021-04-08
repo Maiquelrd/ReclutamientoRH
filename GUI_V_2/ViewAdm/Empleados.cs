@@ -54,7 +54,7 @@ namespace GUI_V_2
             bool correcto = true;
             try
             {
-                empleados.executeCommand("Update empleado set Nombres='" + row.Cells[1].Value.ToString() +
+                empleados.executeCommand("Update persona set Nombres='" + row.Cells[1].Value.ToString() +
                    "', Apellidos='" + row.Cells[2].Value.ToString() +
                    "', Cedula='" + row.Cells[7].Value.ToString() +
                    "', Fecha_Nacimiento='" + Datefix.FixDate(row.Cells[8].Value.ToString()) +

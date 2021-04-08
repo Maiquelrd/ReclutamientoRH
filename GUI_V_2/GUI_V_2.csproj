@@ -59,6 +59,12 @@
     <Compile Include="ViewAdm\Candidatos.Designer.cs">
       <DependentUpon>Candidatos.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewAdm\CrearVacante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAdm\CrearVacante.Designer.cs">
+      <DependentUpon>CrearVacante.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewAdm\CrearEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewAdm\Candidatos.resx">
       <DependentUpon>Candidatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAdm\CrearVacante.resx">
+      <DependentUpon>CrearVacante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewAdm\CrearEmpleado.resx">
       <DependentUpon>CrearEmpleado.cs</DependentUpon>

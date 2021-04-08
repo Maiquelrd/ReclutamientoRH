@@ -68,6 +68,8 @@ E:\Users\Maiquel\Downloads\NosLlEVAeLDIABLOD\NosLlEVAeLDIABLOD\ModernFlat-GUI-Ve
 E:\Users\Maiquel\Downloads\NosLlEVAeLDIABLOD\NosLlEVAeLDIABLOD\ModernFlat-GUI-Version-Base-C-Sharp-master\GUI_V_2\obj\Debug\GUI_V_2.csprojAssemblyReference.cache
 E:\Users\Maiquel\Downloads\NosLlEVAeLDIABLOD\NosLlEVAeLDIABLOD\ModernFlat-GUI-Version-Base-C-Sharp-master\GUI_V_2\obj\Debug\GUI_V_2.PrincipalLogin.resources
 E:\Users\Maiquel\Downloads\NosLlEVAeLDIABLOD\NosLlEVAeLDIABLOD\ModernFlat-GUI-Version-Base-C-Sharp-master\GUI_V_2\obj\Debug\GUI_V_2.Candidatos.resources
+E:\Users\Maiquel\Downloads\NosLlEVAeLDIABLOD\NosLlEVAeLDIABLOD\ModernFlat-GUI-Version-Base-C-Sharp-master\GUI_V_2\obj\Debug\GUI_V_2.ViewAdm.CrearVacante.resources
+E:\Users\Maiquel\Downloads\NosLlEVAeLDIABLOD\NosLlEVAeLDIABLOD\ModernFlat-GUI-Version-Base-C-Sharp-master\GUI_V_2\obj\Debug\GUI_V_2.ViewAdm.CrearEmpleado.resources
 E:\Users\Maiquel\Downloads\NosLlEVAeLDIABLOD\NosLlEVAeLDIABLOD\ModernFlat-GUI-Version-Base-C-Sharp-master\GUI_V_2\obj\Debug\GUI_V_2.Empleados.resources
 E:\Users\Maiquel\Downloads\NosLlEVAeLDIABLOD\NosLlEVAeLDIABLOD\ModernFlat-GUI-Version-Base-C-Sharp-master\GUI_V_2\obj\Debug\GUI_V_2.PrincipalAdm.resources
 E:\Users\Maiquel\Downloads\NosLlEVAeLDIABLOD\NosLlEVAeLDIABLOD\ModernFlat-GUI-Version-Base-C-Sharp-master\GUI_V_2\obj\Debug\GUI_V_2.Properties.Resources.resources

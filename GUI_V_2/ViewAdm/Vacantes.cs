@@ -1,4 +1,5 @@
 ﻿using GUI_V_2.Helpers;
+using GUI_V_2.ViewAdm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +24,7 @@ namespace GUI_V_2
         public void LoadData()
         {
 
-            dataGridView1.DataSource = puestos.getData("SELECT Empleado_ID, Nombres, Apellidos, Fecha_Ingreso, Departamento, Puesto, Salario, Cedula, Fecha_Nacimiento, Genero FROM Empleado inner join persona ON Empleado.Persona_ID = Persona.Persona_ID where Estado = 1; ");
+            dataGridView1.DataSource = puestos.getData("SELECT Nombre,Descripcion,Nivel_Puesto,Salario_Minimo,Salario_Maximo from puesto where Estado = 1; ");
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -37,26 +38,19 @@ namespace GUI_V_2
             bool correcto = true;
             try
             {
-                puestos.executeCommand("Update empleado set Nombres='" + row.Cells[1].Value.ToString() +
-               "', Apellidos='" + row.Cells[2].Value.ToString() +
-               "', Cedula='" + row.Cells[7].Value.ToString() +
-               "', Fecha_Nacimiento='" + Datefix.FixDate(row.Cells[8].Value.ToString()) +
-               "', Genero='" + row.Cells[9].Value.ToString() +
-               "' from Persona as p inner join Empleado as e ON e.Persona_ID = p.Persona_ID  where e.empleado_ID = '" + row.Cells[0].Value.ToString() + "'");
-
-
-                puestos.executeCommand("Update empleado set Fecha_Ingreso='" + Datefix.FixDate(row.Cells[3].Value.ToString()) +
-                "', Departamento='" + row.Cells[4].Value.ToString() +
-                "', Puesto='" + row.Cells[5].Value.ToString() +
-                "', Salario='" + row.Cells[6].Value.ToString() +
-                "' from Empleado as e inner join Persona as p ON e.Persona_ID = p.Persona_ID  where e.empleado_ID = '" + row.Cells[0].Value.ToString() + "'");
+                puestos.executeCommand("Update Puesto set Nombre='" + row.Cells[1].Value.ToString() +
+                   "', Descripcion='" + row.Cells[2].Value.ToString() +
+                   "', Nivel_Puesto='" + row.Cells[7].Value.ToString() +
+                   "', Salario_Minimo='" + Datefix.FixDate(row.Cells[8].Value.ToString()) +
+                   "', Salario_Maximo='" + row.Cells[9].Value.ToString() +
+                   "' from Puesto where Puesto_ID = '" + row.Cells[0].Value.ToString() + "'");
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Console.WriteLine("ups" + ex);
                 correcto = false;
             }
+
             if (correcto)
                 MessageBox.Show("Los datos fueron modificados correctamente", "Datos cambiados");
             else
@@ -66,7 +60,7 @@ namespace GUI_V_2
 
         private void BtnBorrar_Click(object sender, EventArgs e)
         {
-            puestos.executeCommand("Update empleado set Estado='0' where empleado_ID = '" + dataGridView1.CurrentRow.Cells[0].Value.ToString() + "'");
+            puestos.executeCommand("Update puesto set Estado='0' where Puesto_ID = '" + dataGridView1.CurrentRow.Cells[0].Value.ToString() + "'");
             LoadData();
         }
 
@@ -79,6 +73,13 @@ namespace GUI_V_2
         private void Vacantes_Load(object sender, EventArgs e)
         {
             LoadData();
+        }
+
+        private void BtnCrear_Click(object sender, EventArgs e)
+        {
+            CrearVacante crear = new CrearVacante();
+            crear.Show();
+            PrincipalAdm.getInstance().Hide();
         }
     }
 }
