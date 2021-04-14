@@ -24,7 +24,7 @@ namespace GUI_V_2
         public void LoadData()
         {
 
-            dataGridView1.DataSource = puestos.getData("SELECT Nombre,Descripcion,Nivel_Puesto,Salario_Minimo,Salario_Maximo from puesto where Estado = 1; ");
+            dataGridView1.DataSource = puestos.getData("SELECT Puesto_ID as ID,Nombre,Descripcion as Descripción,Nivel_Puesto as Nivel,Salario_Minimo as 'Salario minimo',Salario_Maximo as 'Salario maximo' from puesto where Estado = 1; ");
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -40,9 +40,9 @@ namespace GUI_V_2
             {
                 puestos.executeCommand("Update Puesto set Nombre='" + row.Cells[1].Value.ToString() +
                    "', Descripcion='" + row.Cells[2].Value.ToString() +
-                   "', Nivel_Puesto='" + row.Cells[7].Value.ToString() +
-                   "', Salario_Minimo='" + Datefix.FixDate(row.Cells[8].Value.ToString()) +
-                   "', Salario_Maximo='" + row.Cells[9].Value.ToString() +
+                   "', Nivel_Puesto='" + row.Cells[3].Value.ToString() +
+                   "', Salario_Minimo='" + Datefix.FixDate(row.Cells[4].Value.ToString()) +
+                   "', Salario_Maximo='" + row.Cells[5].Value.ToString() +
                    "' from Puesto where Puesto_ID = '" + row.Cells[0].Value.ToString() + "'");
 
             }
@@ -79,6 +79,20 @@ namespace GUI_V_2
         {
             CrearVacante crear = new CrearVacante();
             crear.Show();
+            PrincipalAdm.getInstance().Hide();
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var row = dataGridView1.CurrentRow;
+            
+            VacantesDetails details = new VacantesDetails(row.Cells[0].Value.ToString());
+            details.Show();
             PrincipalAdm.getInstance().Hide();
         }
     }

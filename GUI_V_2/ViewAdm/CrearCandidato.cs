@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -11,10 +12,10 @@ using System.Windows.Forms;
 
 namespace GUI_V_2.ViewAdm
 {
-    public partial class CrearEmpleado : Form
+    public partial class CrearCandidato : Form
     {
         CD_Commands commands = new CD_Commands();
-        public CrearEmpleado()
+        public CrearCandidato()
         {
             InitializeComponent();
         }
@@ -32,7 +33,7 @@ namespace GUI_V_2.ViewAdm
 
         private void BtnCrear_Click(object sender, EventArgs e)
         {
-            if(textBox5.Text == textBox10.Text)
+           if(textBox5.Text == textBox10.Text)
             {
                 bool correcto = true;
                 try
@@ -44,7 +45,7 @@ namespace GUI_V_2.ViewAdm
                         comboBox1.Text.ToString() + "')");
 
                 }
-                catch (Exception)
+                catch (SqlException)
                 {
                     correcto = false;
                 }
@@ -53,14 +54,10 @@ namespace GUI_V_2.ViewAdm
                     try
                     {
                         string id = commands.getSpecificData("SELECT MAX(Persona_ID) as maxid FROM Persona");
-                        commands.executeCommand("INSERT INTO empleado (Persona_ID,Fecha_Ingreso,Departamento,Puesto,Salario,Estado) VALUES ('" + id + "', '" +
-                        Datefix.FixDate(DateTime.Now.ToString()) + "', '" +
-                        textBox6.Text.ToString() + "', '" +
-                        textBox7.Text.ToString() + "', '" +
-                        textBox8.Text.ToString() + "', '" +
-                        "1')");
+                        commands.executeCommand("INSERT INTO candidato (Persona_ID,Recomendado_por) VALUES ('" + id + "', '" +
+                        textBox6.Text.ToString() + "')");
                     }
-                    catch (Exception)
+                    catch (SqlException)
                     {
                         correcto = false;
                     }
@@ -69,34 +66,35 @@ namespace GUI_V_2.ViewAdm
                         try
                         {
                             string id = commands.getSpecificData("SELECT MAX(Persona_ID) as maxid FROM Persona");
-                            commands.executeCommand("INSERT INTO Usuario (Persona_ID,Rol_ID, Username, Password) VALUES ('" + id + "',1, '" +
+                            commands.executeCommand("INSERT INTO Usuario (Persona_ID,Rol_ID, Username, Password, Estado) VALUES ('" + id + "',2, '" +
                             textBox9.Text.ToString() + "', '" +
-                            textBox5.Text.ToString() + "')");
+                            textBox5.Text.ToString() + "', '" +
+                            "1')");
                         }
-                        catch (Exception)
+                        catch (SqlException)
                         {
                             correcto = false;
                         }
                     }
                 }
+
                 if (correcto)
                 {
                     MessageBox.Show("Los datos fueron agregados correctamente", "Datos agregados");
                     CerrarForm();
                 }
-               
+
                 else
                     MessageBox.Show("Hubo un error a la hora de agregar los datos", "Error");
-
             }
-            else
+           else
                 MessageBox.Show("Las contraseñas no coinciden", "Error");
         }
 
         private void CerrarForm()
         {
             PrincipalAdm.getInstance().Show();
-            PrincipalAdm.getInstance().button1_Click(null, null);
+            PrincipalAdm.getInstance().Candidatos_Click(null, null);
             this.Close();
         }
     }

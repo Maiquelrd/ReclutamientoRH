@@ -59,6 +59,12 @@
     <Compile Include="ViewAdm\Candidatos.Designer.cs">
       <DependentUpon>Candidatos.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewAdm\CrearCandidato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAdm\CrearCandidato.Designer.cs">
+      <DependentUpon>CrearCandidato.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewAdm\CrearVacante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,11 +97,20 @@
     <Compile Include="ViewAdm\Vacantes.Designer.cs">
       <DependentUpon>Vacantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewAdm\VacantesDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAdm\VacantesDetails.Designer.cs">
+      <DependentUpon>VacantesDetails.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Login\PrincipalLogin.resx">
       <DependentUpon>PrincipalLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewAdm\Candidatos.resx">
       <DependentUpon>Candidatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAdm\CrearCandidato.resx">
+      <DependentUpon>CrearCandidato.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewAdm\CrearVacante.resx">
       <DependentUpon>CrearVacante.cs</DependentUpon>
@@ -121,6 +136,9 @@
     </Compile>
     <EmbeddedResource Include="ViewAdm\Vacantes.resx">
       <DependentUpon>Vacantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAdm\VacantesDetails.resx">
+      <DependentUpon>VacantesDetails.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

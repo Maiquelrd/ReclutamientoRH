@@ -117,7 +117,7 @@ namespace GUI_V_2
                 fh.Show();
             }
         }
-        private void Candidatos_Click(object sender, EventArgs e)
+        public void Candidatos_Click(object sender, EventArgs e)
         {
             AbrirFormEnPanel(new Candidatos());
         }
@@ -135,7 +135,7 @@ namespace GUI_V_2
                 fh.Show();
             }
         }
-        private void button2_Click(object sender, EventArgs e)
+        public void button2_Click(object sender, EventArgs e)
         {
             AbrirFormEnPanel(new Vacantes());
         }
@@ -154,7 +154,7 @@ namespace GUI_V_2
                 fh.Show();
             }
         }
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             AbrirFormEnPanel(new Empleados());
         }
