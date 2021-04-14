@@ -1,7 +1,7 @@
 ﻿
 namespace GUI_V_2.ViewAdm
 {
-    partial class CrearEmpleado
+    partial class CrearCandidato
     {
         /// <summary>
         /// Required designer variable.
@@ -39,20 +39,16 @@ namespace GUI_V_2.ViewAdm
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.BtnCancelar = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BtnCrear
@@ -63,7 +59,7 @@ namespace GUI_V_2.ViewAdm
             this.BtnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCrear.ForeColor = System.Drawing.Color.Black;
-            this.BtnCrear.Location = new System.Drawing.Point(147, 318);
+            this.BtnCrear.Location = new System.Drawing.Point(147, 292);
             this.BtnCrear.Name = "BtnCrear";
             this.BtnCrear.Size = new System.Drawing.Size(183, 46);
             this.BtnCrear.TabIndex = 3;
@@ -143,45 +139,11 @@ namespace GUI_V_2.ViewAdm
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(365, 191);
+            this.label5.Location = new System.Drawing.Point(365, 116);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 24);
             this.label5.TabIndex = 12;
             this.label5.Text = "Sexo";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(506, 120);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(155, 20);
-            this.textBox7.TabIndex = 17;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(365, 115);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 24);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Puesto";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(506, 157);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(155, 20);
-            this.textBox8.TabIndex = 19;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(365, 152);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 24);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Salario";
             // 
             // textBox6
             // 
@@ -196,9 +158,9 @@ namespace GUI_V_2.ViewAdm
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(365, 75);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(140, 24);
+            this.label6.Size = new System.Drawing.Size(147, 24);
             this.label6.TabIndex = 14;
-            this.label6.Text = "Departamento";
+            this.label6.Text = "Recomendado";
             // 
             // comboBox1
             // 
@@ -206,7 +168,7 @@ namespace GUI_V_2.ViewAdm
             this.comboBox1.Items.AddRange(new object[] {
             "Masculino",
             "Femenino"});
-            this.comboBox1.Location = new System.Drawing.Point(506, 191);
+            this.comboBox1.Location = new System.Drawing.Point(506, 116);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(155, 21);
             this.comboBox1.TabIndex = 20;
@@ -218,7 +180,7 @@ namespace GUI_V_2.ViewAdm
             this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.BtnCancelar.Location = new System.Drawing.Point(369, 318);
+            this.BtnCancelar.Location = new System.Drawing.Point(369, 292);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(183, 46);
             this.BtnCancelar.TabIndex = 21;
@@ -226,65 +188,65 @@ namespace GUI_V_2.ViewAdm
             this.BtnCancelar.UseVisualStyleBackColor = false;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
-            // label10
+            // textBox10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(34, 223);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(81, 24);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "Usuario";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(175, 225);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(155, 20);
-            this.textBox9.TabIndex = 23;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(365, 225);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(116, 24);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "Contraseña";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(506, 227);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.PasswordChar = '*';
-            this.textBox5.Size = new System.Drawing.Size(155, 20);
-            this.textBox5.TabIndex = 25;
+            this.textBox10.Location = new System.Drawing.Point(505, 183);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.PasswordChar = '*';
+            this.textBox10.Size = new System.Drawing.Size(155, 20);
+            this.textBox10.TabIndex = 33;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(365, 258);
+            this.label11.Location = new System.Drawing.Point(364, 181);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(77, 24);
-            this.label11.TabIndex = 26;
+            this.label11.TabIndex = 32;
             this.label11.Text = "Repetir";
             // 
-            // textBox10
+            // textBox5
             // 
-            this.textBox10.Location = new System.Drawing.Point(506, 260);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.PasswordChar = '*';
-            this.textBox10.Size = new System.Drawing.Size(155, 20);
-            this.textBox10.TabIndex = 27;
+            this.textBox5.Location = new System.Drawing.Point(505, 150);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.PasswordChar = '*';
+            this.textBox5.Size = new System.Drawing.Size(155, 20);
+            this.textBox5.TabIndex = 31;
             // 
-            // CrearEmpleado
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(364, 148);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(116, 24);
+            this.label9.TabIndex = 30;
+            this.label9.Text = "Contraseña";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(175, 231);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(155, 20);
+            this.textBox9.TabIndex = 29;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(34, 229);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(81, 24);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "Usuario";
+            // 
+            // CrearCandidato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(692, 376);
+            this.ClientSize = new System.Drawing.Size(692, 350);
             this.ControlBox = false;
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.label11);
@@ -294,10 +256,6 @@ namespace GUI_V_2.ViewAdm
             this.Controls.Add(this.label10);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -311,8 +269,8 @@ namespace GUI_V_2.ViewAdm
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnCrear);
             this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Name = "CrearEmpleado";
-            this.Text = "Crear Empleado";
+            this.Name = "CrearCandidato";
+            this.Text = "Crear Candidato";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,19 +288,15 @@ namespace GUI_V_2.ViewAdm
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button BtnCancelar;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label10;
     }
 }

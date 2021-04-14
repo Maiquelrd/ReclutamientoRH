@@ -40,7 +40,7 @@ namespace GUI_V_2
         public void LoadData()
         {
            
-           dataGridView1.DataSource =  empleados.getData("SELECT Empleado_ID, Nombres, Apellidos, Fecha_Ingreso, Departamento, Puesto, Salario, Cedula, Fecha_Nacimiento, Genero FROM Empleado inner join persona ON Empleado.Persona_ID = Persona.Persona_ID where Estado = 1; ");
+           dataGridView1.DataSource =  empleados.getData("SELECT Empleado_ID as ID, Usuario.Username as Usuario, Nombres, Apellidos, Fecha_Ingreso As 'Fecha de ingreso', Departamento, Puesto, Salario, Cedula, Fecha_Nacimiento as 'Fecha de nacimiento', Genero FROM Empleado inner join persona ON Empleado.Persona_ID = Persona.Persona_ID inner join usuario on persona.Persona_ID = usuario.Persona_ID where empleado.Estado = 1;");
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -54,11 +54,11 @@ namespace GUI_V_2
             bool correcto = true;
             try
             {
-                empleados.executeCommand("Update persona set Nombres='" + row.Cells[1].Value.ToString() +
-                   "', Apellidos='" + row.Cells[2].Value.ToString() +
-                   "', Cedula='" + row.Cells[7].Value.ToString() +
-                   "', Fecha_Nacimiento='" + Datefix.FixDate(row.Cells[8].Value.ToString()) +
-                   "', Genero='" + row.Cells[9].Value.ToString() +
+                empleados.executeCommand("Update persona set Nombres='" + row.Cells[2].Value.ToString() +
+                   "', Apellidos='" + row.Cells[3].Value.ToString() +
+                   "', Cedula='" + row.Cells[8].Value.ToString() +
+                   "', Fecha_Nacimiento='" + Datefix.FixDate(row.Cells[9].Value.ToString()) +
+                   "', Genero='" + row.Cells[10].Value.ToString() +
                    "' from Persona as p inner join Empleado as e ON e.Persona_ID = p.Persona_ID  where e.empleado_ID = '" + row.Cells[0].Value.ToString() + "'"); 
 
             }
@@ -70,10 +70,10 @@ namespace GUI_V_2
             {
                 try
                 {
-                    empleados.executeCommand("Update empleado set Fecha_Ingreso='" + Datefix.FixDate(row.Cells[3].Value.ToString()) +
-                       "', Departamento='" + row.Cells[4].Value.ToString() +
-                       "', Puesto='" + row.Cells[5].Value.ToString() +
-                       "', Salario='" + row.Cells[6].Value.ToString() +
+                    empleados.executeCommand("Update empleado set Fecha_Ingreso='" + Datefix.FixDate(row.Cells[4].Value.ToString()) +
+                       "', Departamento='" + row.Cells[5].Value.ToString() +
+                       "', Puesto='" + row.Cells[6].Value.ToString() +
+                       "', Salario='" + row.Cells[7].Value.ToString() +
                        "' from Empleado as e inner join Persona as p ON e.Persona_ID = p.Persona_ID  where e.empleado_ID = '" + row.Cells[0].Value.ToString() + "'");
                 }
                 catch (Exception)

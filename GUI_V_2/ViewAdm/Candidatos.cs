@@ -29,7 +29,7 @@ namespace GUI_V_2
         public void LoadData()
         {
 
-            dataGridView1.DataSource = candidatos.getData("SELECT Candidato_ID, Nombres, Apellidos, Recomendado_Por, Curriculum, Cedula, Fecha_Nacimiento, Genero FROM Candidato inner join persona ON Empleado.Persona_ID = Persona.Persona_ID where Estado = 1; ");
+            dataGridView1.DataSource = candidatos.getData("SELECT Candidato_ID as ID, Usuario.Username as 'Usuario', Nombres, Apellidos, Recomendado_Por AS 'Recomendado por', Cedula, Fecha_Nacimiento as 'Fecha de nacimiento', Genero FROM Candidato inner join persona ON Candidato.Persona_ID = Persona.Persona_ID inner join Usuario on Persona.Persona_ID = Usuario.Persona_ID;  ");
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -48,7 +48,7 @@ namespace GUI_V_2
                    "', Cedula='" + row.Cells[5].Value.ToString() +
                    "', Fecha_Nacimiento='" + Datefix.FixDate(row.Cells[6].Value.ToString()) +
                    "', Genero='" + row.Cells[7].Value.ToString() +
-                   "' from Persona as p inner join Empleado as e ON e.Persona_ID = p.Persona_ID  where e.empleado_ID = '" + row.Cells[0].Value.ToString() + "'");
+                   "' from Persona as p inner join Candidato as e ON e.Persona_ID = p.Persona_ID  where e.candidato_ID = '" + row.Cells[0].Value.ToString() + "'");
 
             }
             catch (Exception)
@@ -90,7 +90,7 @@ namespace GUI_V_2
 
         private void BtnCrear_Click(object sender, EventArgs e)
         {
-            CrearVacante crear = new CrearVacante();
+            CrearCandidato crear = new CrearCandidato();
             crear.Show();
             PrincipalAdm.getInstance().Hide();
         }
