@@ -14,6 +14,7 @@ namespace GUI_V_2
 {
     public partial class PrincipalLogin : Form
     {
+        CD_Commands connection = new CD_Commands();
         public PrincipalLogin()
         {
             InitializeComponent();
@@ -49,7 +50,11 @@ namespace GUI_V_2
                         }
                         if (validRol == "2")
                         {
-
+                            string test = connection.getSpecificData("select Usuario_ID from usuario where Username = '" + txtuser.Text + "' and Password='" + txtpass.Text + "';");
+                            CurrentUser currentUser = new CurrentUser(Convert.ToInt32(test));
+                            PrincipalUsr mainMenu = new PrincipalUsr();
+                            mainMenu.Show();
+                            this.Hide();
                         }
                     }
                         else

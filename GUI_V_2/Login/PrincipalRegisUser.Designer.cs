@@ -44,17 +44,15 @@ namespace GUI_V_2.Login
             this.label2 = new System.Windows.Forms.Label();
             this.txtFechaNaci = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtGenero = new System.Windows.Forms.TextBox();
             this.txtCedula = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtRecom = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtpass = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtsexo = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtpassR = new System.Windows.Forms.TextBox();
             this.lblR = new System.Windows.Forms.Label();
+            this.txtGenero = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimizar)).BeginInit();
@@ -200,13 +198,6 @@ namespace GUI_V_2.Login
             this.label3.TabIndex = 31;
             this.label3.Text = "Genero";
             // 
-            // txtGenero
-            // 
-            this.txtGenero.Location = new System.Drawing.Point(498, 64);
-            this.txtGenero.Name = "txtGenero";
-            this.txtGenero.Size = new System.Drawing.Size(257, 20);
-            this.txtGenero.TabIndex = 6;
-            // 
             // txtCedula
             // 
             this.txtCedula.Location = new System.Drawing.Point(220, 263);
@@ -260,23 +251,6 @@ namespace GUI_V_2.Login
             this.label6.TabIndex = 37;
             this.label6.Text = "Contraseña";
             // 
-            // txtsexo
-            // 
-            this.txtsexo.Location = new System.Drawing.Point(221, 325);
-            this.txtsexo.Name = "txtsexo";
-            this.txtsexo.Size = new System.Drawing.Size(257, 20);
-            this.txtsexo.TabIndex = 5;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(216, 297);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 25);
-            this.label7.TabIndex = 39;
-            this.label7.Text = "Sexo";
-            // 
             // txtpassR
             // 
             this.txtpassR.Location = new System.Drawing.Point(498, 325);
@@ -294,23 +268,32 @@ namespace GUI_V_2.Login
             this.lblR.TabIndex = 41;
             this.lblR.Text = "Repetir Contraseña";
             // 
+            // txtGenero
+            // 
+            this.txtGenero.FormattingEnabled = true;
+            this.txtGenero.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino"});
+            this.txtGenero.Location = new System.Drawing.Point(496, 63);
+            this.txtGenero.Name = "txtGenero";
+            this.txtGenero.Size = new System.Drawing.Size(256, 21);
+            this.txtGenero.TabIndex = 42;
+            // 
             // RegistrarUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtGenero);
             this.Controls.Add(this.txtpassR);
             this.Controls.Add(this.lblR);
-            this.Controls.Add(this.txtsexo);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.txtpass);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtRecom);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCedula);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtGenero);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtFechaNaci);
             this.Controls.Add(this.label2);
@@ -354,16 +337,14 @@ namespace GUI_V_2.Login
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtFechaNaci;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtGenero;
         private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtRecom;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtpass;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtsexo;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtpassR;
         private System.Windows.Forms.Label lblR;
+        private System.Windows.Forms.ComboBox txtGenero;
     }
 }

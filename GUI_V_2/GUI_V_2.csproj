@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="CD_Conexion.cs" />
     <Compile Include="CD_Commands.cs" />
+    <Compile Include="CurrentUser.cs" />
     <Compile Include="Helpers\Datefix.cs" />
     <Compile Include="Login\PrincipalLogin.cs">
       <SubType>Form</SubType>
@@ -108,6 +109,36 @@
     <Compile Include="ViewAdm\Vacantes.Designer.cs">
       <DependentUpon>Vacantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewUsr\CrearIdiomas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewUsr\CrearIdiomas.Designer.cs">
+      <DependentUpon>CrearIdiomas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewUsr\Idiomas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewUsr\Idiomas.Designer.cs">
+      <DependentUpon>Idiomas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewUsr\Capacitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewUsr\Capacitaciones.Designer.cs">
+      <DependentUpon>Capacitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewUsr\CrearCapacitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewUsr\CrearCapacitaciones.Designer.cs">
+      <DependentUpon>CrearCapacitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewUsr\PrincipalUsr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewUsr\PrincipalUsr.Designer.cs">
+      <DependentUpon>PrincipalUsr.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewAdm\VacantesDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +185,18 @@
     <EmbeddedResource Include="ViewAdm\VacantesDetails.resx">
       <DependentUpon>VacantesDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewUsr\Capacitaciones.resx">
+      <DependentUpon>Capacitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewUsr\CrearCapacitaciones.resx">
+      <DependentUpon>CrearCapacitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewUsr\Idiomas.resx">
+      <DependentUpon>Idiomas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewUsr\PrincipalUsr.resx">
+      <DependentUpon>PrincipalUsr.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -188,6 +231,7 @@
   <ItemGroup>
     <None Include="Resources\cerrar-sesion.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
