@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -53,6 +56,14 @@
     <Compile Include="Login\PrincipalLogin.Designer.cs">
       <DependentUpon>PrincipalLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login\PrincipalRegisUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\PrincipalRegisUser.Designer.cs">
+      <DependentUpon>PrincipalRegisUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserDao.cs" />
+    <Compile Include="UserModel.cs" />
     <Compile Include="ViewAdm\Candidatos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +104,9 @@
     </Compile>
     <EmbeddedResource Include="Login\PrincipalLogin.resx">
       <DependentUpon>PrincipalLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\PrincipalRegisUser.resx">
+      <DependentUpon>PrincipalRegisUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewAdm\Candidatos.resx">
       <DependentUpon>Candidatos.cs</DependentUpon>

@@ -16,7 +16,7 @@ namespace GUI_V_2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PrincipalAdm());
+            Application.Run(new PrincipalLogin());
         }
     }
 }
