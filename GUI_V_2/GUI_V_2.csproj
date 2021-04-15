@@ -109,6 +109,14 @@
     <Compile Include="ViewAdm\Vacantes.Designer.cs">
       <DependentUpon>Vacantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewUsr\competencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewUsr\competencias.Designer.cs" />
+    <Compile Include="ViewUsr\CrearCompetencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewUsr\CrearCompetencia.Designer.cs" />
     <Compile Include="ViewUsr\CrearIdiomas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,9 +196,11 @@
     <EmbeddedResource Include="ViewUsr\Capacitaciones.resx">
       <DependentUpon>Capacitaciones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewUsr\competencias.resx" />
     <EmbeddedResource Include="ViewUsr\CrearCapacitaciones.resx">
       <DependentUpon>CrearCapacitaciones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewUsr\CrearCompetencia.resx" />
     <EmbeddedResource Include="ViewUsr\Idiomas.resx">
       <DependentUpon>Idiomas.cs</DependentUpon>
     </EmbeddedResource>

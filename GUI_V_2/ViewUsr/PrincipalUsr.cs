@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using GUI_V_2.ViewCandidates;
 
 namespace GUI_V_2
 {
@@ -171,6 +172,11 @@ namespace GUI_V_2
         private void BarraTitulo_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new competencias());
         }
     }
 }

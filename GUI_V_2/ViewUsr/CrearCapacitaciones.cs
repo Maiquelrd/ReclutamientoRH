@@ -27,7 +27,7 @@ namespace GUI_V_2.ViewAdm
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
-            PrincipalAdm.getInstance().Show();
+            PrincipalUsr.getInstance().Show();
             this.Close();
 
         }
